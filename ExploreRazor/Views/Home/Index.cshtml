@@ -1,0 +1,44 @@
+﻿@*@{
+            int num1 = 3;
+            int num2 = 15;
+            int result = num1 + num2;
+
+        }
+
+        <h2>@result</h2>
+
+    @{
+            int num;
+            string even;
+            for (int i = 12; i < 43; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    num = i;
+                    even = " even";
+                    <h2>@num @even</h2>
+                }
+
+            }
+        }
+
+        @{
+            var string32 = "32";
+            int num32;
+            if (string32.IsInt() == true)
+            {
+                num32 = string32.AsInt();
+                <h2>@num32</h2>
+            }
+        }*@
+<div class="row">
+        @{
+            int[] number = { 2, 6, 2, 55, 62, 64, 67 };
+            foreach (int num in number)
+            {
+                <div class="col-md-1">
+                    <h2> @num </h2>
+                </div>
+            }
+        }
+</div>
